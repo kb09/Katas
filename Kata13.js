@@ -9,7 +9,10 @@ const talkingCalendar = function(date){
   let month = date.slice(5,7);
   let day = date.slice(8)
 
-  let dateString = month + " " + day + " " + year;
+  let monthString =['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+  let dateString = monthString[month] + " " + day + " " + year;
+
 
   return dateString;
 
