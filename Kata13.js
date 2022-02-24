@@ -9,10 +9,28 @@ const talkingCalendar = function(date){
   let month = date.slice(5,7)-1; 
   let day = parseInt(date.slice(8))
 
-  let monthString =['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  const monthString =['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  let suffix = '';
+  switch(day){
+    case 1:
+    case 21:  
+    case 31:
+      suffix = 'st';
+      break;  
+    case 2:
+    case 22:
+      suffix = 'nd';
+      break;
+   
+    case 3:
+      suffix = 'rd'
+      break;
+ 
+     default:
+       suffix = 'th'
+  }
 
-  let dateString = monthString[month] + " " + day + " " + year;
-
+  let dateString = monthString[month] + " " + day + suffix + " " + year;
 
   return dateString;
 
