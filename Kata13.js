@@ -6,8 +6,8 @@ more English friendly date strings like December 2nd, 2017.
 const talkingCalendar = function(date){
 
   let year = date.slice(0,4);
-  let month = date.slice(5,7)-1;
-  let day = date.slice(8)
+  let month = date.slice(5,7)-1; 
+  let day = parseInt(date.slice(8))
 
   let monthString =['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
