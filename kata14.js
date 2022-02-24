@@ -1,12 +1,25 @@
 /* 
 We will be given two numbers, the total of a transaction, and the amount of cash given to the cashier.
 Both of these numbers will be represented as whole numbers in cents. Therefore $10 will be represented as 1000.
+
 Our function calculateChange should return an object which describes the total amount of change for the cashier to give back. 
 Although pennies are not used in circulation, we will still calculate the amount of pennies to give back.
 */
 
 const calculateChange = function(total, cash) {
-  // Your code here
+  let changeBack = cash - total; 
+
+  let Twenty = 2000
+  let Ten = 1000
+  let Five =   500
+  let Two = 200
+  let One = 100
+  let Quarter = 25 
+  let Dime = 10
+  let Nickel = 5
+  let Penny = 1;
+
+  return changeBack;
 };
 
 console.log(calculateChange(1787, 2000));
