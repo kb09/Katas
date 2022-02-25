@@ -9,17 +9,30 @@ Although pennies are not used in circulation, we will still calculate the amount
 const calculateChange = function(total, cash) {
   let changeBack = cash - total; 
 
-  let Twenty = 2000
-  let Ten = 1000
-  let Five =   500
-  let Two = 200
-  let One = 100
-  let Quarter = 25 
-  let Dime = 10
-  let Nickel = 5
-  let Penny = 1;
+  let change = {}
+  
+  
 
-  return changeBack;
+  const coinTypes = ['twenty', 'ten', 'five', 'twoDollars', 'dollar' ,'quarter','dime', 'nickel', 'penny'];
+
+  const coinValues = [2000, 1000, 500, 200, 100, 25, 10, 5, 1];
+
+  // index of coinTypes match their respective index of coinValues
+
+  let amount;
+
+  for (let i = 0; i < coinValues.length; i++){
+    amount = Math.floor(changeBack / coinValues[i]);
+    if (amount > 0){
+      change[coinTypes[i]] = amount 
+      changeBack = changeBack % coinTypes[i]
+    }
+
+
+  }
+
+  // return changeBack;
+  return change;
 };
 
 console.log(calculateChange(1787, 2000));
