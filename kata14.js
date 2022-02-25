@@ -13,7 +13,7 @@ const calculateChange = function(total, cash) {
   
   
 
-  const coinTypes = ['twenty', 'ten', 'five', 'twoDollars', 'dollar' ,'quarter','dime', 'nickel', 'penny'];
+  const coinTypes = ['twenty', 'tenDollar', 'five', 'twoDollars', 'oneDollar' ,'quarter','dime', 'nickel', 'penny'];
 
   const coinValues = [2000, 1000, 500, 200, 100, 25, 10, 5, 1];
 
@@ -25,7 +25,7 @@ const calculateChange = function(total, cash) {
     amount = Math.floor(changeBack / coinValues[i]);
     if (amount > 0){
       change[coinTypes[i]] = amount 
-      changeBack = changeBack % coinTypes[i]
+      changeBack = changeBack % coinValues[i]
     }
 
 
